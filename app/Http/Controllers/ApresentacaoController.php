@@ -10,8 +10,19 @@ class ApresentacaoController extends Controller
      * Display a listing of the resource.
      */
     public function index()
-    {
-        return view('apresentacao');        
+    {   
+        $dados = [
+            0 => [
+                'nome' => 'Jhone'
+            ],
+            1 => [
+                'nome' => 'Silva'
+            ]
+        ];
+
+        return view('apresentacao', [
+            'objetos' => $dados
+        ]);        
     }
 
     /**

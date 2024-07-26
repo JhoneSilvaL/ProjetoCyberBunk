@@ -8,6 +8,10 @@
 </head>
 <body>
     <h1>Olá Mundo!</h1>
+    @foreach($objetos as $objeto)
+       <h2> Meu nome é: {{ $objeto['nome'] }} </h2>
+    @endforeach
+
     <h1>Hello World!</h1>
 </body>
 </html>

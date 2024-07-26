@@ -30,7 +30,7 @@ class AlunoController extends Controller
     {
         Aluno::create(['nome' => 'Alisson', 'matricula' => '16']);
         Aluno::create(['nome' => 'Jailson', 'matricula' => '25']);
-        Aluno::create(['nome' => 'Jose', 'matricula' => '26']);
+        Aluno::create(['no me' => 'Jose', 'matricula' => '26']);
         Aluno::create(['nome' => 'Matias', 'matricula' => '50']);
     }
 
