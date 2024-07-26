@@ -13,10 +13,12 @@ class ApresentacaoController extends Controller
     {   
         $dados = [
             0 => [
-                'nome' => 'Jhone'
+                'nome' => 'Jhone',
+                'idade' => 18
             ],
             1 => [
-                'nome' => 'Silva'
+                'nome' => 'Silva',
+                'idade' => 18
             ]
         ];
 
