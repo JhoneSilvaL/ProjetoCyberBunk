@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
-class ApresentacaoController extends Controller
+class CursoController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -22,7 +22,7 @@ class ApresentacaoController extends Controller
             ]
         ];
 
-        return view('apresentacao', [
+        return view('curso-listagem', [
             'objetos' => $dados
         ]);        
     }
