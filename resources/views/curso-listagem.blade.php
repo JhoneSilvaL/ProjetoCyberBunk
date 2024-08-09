@@ -1,24 +1,28 @@
 @extends('adminlte::page')
 
-@section('title', 'Dashboard')
+@section('title', 'Listagem de Cursos')
 
 @section('content_header')
-    <h1>Dashboard</h1>
+    <h1>Listagem de Cursos</h1>
 @stop
 
 @section('content')
     <table class="table table-warning table-striped">
         <tr>
+            <th>ID</th>
             <th>Nome</th>
-            <th>Idade</th>
         </tr>
             
-        @foreach($objetos as $objeto)
+        @forelse($objetos as $objeto)
         <tr>
+            <td> {{ $objeto['id'] }} </td>
             <td> {{ $objeto['nome'] }} </td>
-            <td> {{ $objeto['idade'] }} </td>
         </tr>
-        @endforeach
+        @empty
+        <tr>
+            <td> Não há registros cadastrados. </td>
+        </tr>
+        @endforelse
     </table>
 @stop
 

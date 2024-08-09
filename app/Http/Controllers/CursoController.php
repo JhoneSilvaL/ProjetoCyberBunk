@@ -12,19 +12,10 @@ class CursoController extends Controller
      */
     public function index()
     {   
-        $dados = [
-            0 => [
-                'nome' => 'Jhone',
-                'idade' => 18
-            ],
-            1 => [
-                'nome' => 'Silva',
-                'idade' => 18
-            ]
-        ];
+        $dadosCurso = Curso::all();
 
         return view('curso-listagem', [
-            'objetos' => $dados
+            'objetos' => $dadosCurso
         ]);        
     }
 
