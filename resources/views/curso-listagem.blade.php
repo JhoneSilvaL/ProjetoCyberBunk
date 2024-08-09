@@ -4,8 +4,8 @@
 
 @section('content_header')
     <h1>Listagem de Cursos</h1>
+    <a href="{{ route ('curso.cadastro')}}" class="btn btn-secondary">Novo Cadastro</a>
 @stop
-
 @section('content')
     <table class="table table-warning table-striped">
         <tr>

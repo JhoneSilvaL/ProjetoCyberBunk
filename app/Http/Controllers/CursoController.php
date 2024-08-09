@@ -24,7 +24,7 @@ class CursoController extends Controller
      */
     public function create()
     {
-        //
+        return view('curso-cadastro');
     }
 
     /**
