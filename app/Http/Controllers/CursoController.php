@@ -32,7 +32,9 @@ class CursoController extends Controller
      */
     public function store(Request $request)
     {
-        $request->all();
+        $dados = $request->all();
+
+        dd($dados);
     }
 
     /**
