@@ -10,7 +10,7 @@
     <form action="{{route('curso.salvar')}}" method="POST">
         @csrf
         <label for="nome">Nome</label>
-        <input type="text" name="nome" id="nome">
+        <input type="text" name="nome" id="nome" required autofocus>
         <button>Salvar</button>
     </form>
 @stop
