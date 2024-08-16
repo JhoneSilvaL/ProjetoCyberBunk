@@ -7,13 +7,17 @@ use App\Http\Controllers\CursoController;
 
 Route::get('/', [CursoController::class, 'index']);
 
+// Route, verbo, nome da rota temporário, classe do controller utilizada, nome da rota permanente.
 Route::get('/curso-listagem', [CursoController::class, 'index'])->name('curso.listagem');
 Route::get('/curso-cadastro', [CursoController::class, 'create'])->name('curso.cadastro');
 Route::post('/curso-salvar', [CursoController::class, 'store'])->name('curso.salvar');
-Auth::routes();
+Route::get('/curso-alterar/{id}', [CursoController::class, 'edit'])->name('curso.alterar');
+Route::put('/curso-atualizar/{id}', [CursoController::class, 'update'])->name('curso.atualizar');
 
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+// // // Auth::routes();
 
-Route::get('/welcome', function(){
-    return view("welcome");
-});
+// // Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+// // Route::get('/welcome', function(){
+// //     return view("welcome");
+// });

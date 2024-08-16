@@ -12,10 +12,10 @@ class CursoController extends Controller
      */
     public function index()
     {   
-        $dadosCurso = Curso::all();
+        $dados = Curso::all();
 
         return view('curso-listagem', [
-            'objetos' => $dadosCurso
+            'objetos' => $dados
         ]);        
     }
 
@@ -54,7 +54,16 @@ class CursoController extends Controller
      */
     public function edit(string $id)
     {
-        //
+        dd($id);
+        $dado = Curso::find($id);
+    
+        if($dado){
+            return view('curso-alterar', 
+                ['objeto' => $dado]
+            );
+        }else{
+            return redirect()->back();  
+        }
     }
 
     /**
