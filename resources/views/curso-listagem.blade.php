@@ -11,12 +11,14 @@
         <tr>
             <th>ID</th>
             <th>Nome</th>
+            <th>Ações</th>
         </tr>
             
         @forelse($objetos as $objeto)
         <tr>
             <td> {{ $objeto['id'] }} </td>
             <td> {{ $objeto['nome'] }} </td>
+            <td> <a href="{{ route('curso.alterar', ['id' => $objeto['id']] )}}">Alterar</a> </td>
         </tr>
         @empty
         <tr>
