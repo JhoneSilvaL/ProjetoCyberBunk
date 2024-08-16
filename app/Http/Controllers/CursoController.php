@@ -54,7 +54,6 @@ class CursoController extends Controller
      */
     public function edit(string $id)
     {
-        dd($id);
         $dado = Curso::find($id);
     
         if($dado){
