@@ -32,9 +32,13 @@ class CursoController extends Controller
      */
     public function store(Request $request)
     {
-        $dados = $request->all();
+        $dados_formulario = $request->all();
 
-        dd($dados);
+        $retorno = Curso::create($dados_formulario);
+
+        if($retorno){
+            return redirect()->route('curso.listagem');
+        }
     }
 
     /**
