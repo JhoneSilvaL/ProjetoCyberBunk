@@ -294,14 +294,11 @@ return [
     */
 
     'menu' => [
-        // Navbar items:
+        // Navbar items
+        
         [
             'type' => 'navbar-search',
             'text' => 'search',
-            'topnav_right' => true,
-        ],
-        [
-            'type' => 'fullscreen-widget',
             'topnav_right' => true,
         ],
 
@@ -316,11 +313,9 @@ return [
             'can' => 'manage-blog',
         ],
         [
-            'text' => 'pages',
-            'url' => 'admin/pages',
-            'icon' => 'far fa-fw fa-file',
-            'label' => 4,
-            'label_color' => 'success',
+            'text' => 'Cursos',
+            'url' => '/curso-listagem',
+            'icon' => 'fas fa-fw fa-user',
         ],
         ['header' => 'account_settings'],
         [

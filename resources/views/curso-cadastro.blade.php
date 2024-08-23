@@ -19,7 +19,7 @@
     </div>
     @endif
     <label for="nome">Nome</label>
-    <input type="text" name="nome" id="nome" required autofocus>
+    <input type="text" name="nome" id="nome" value="{{old('nome')}}" required autofocus maxlenght="60">
     <button>Salvar</button>
 </form>
 @stop
