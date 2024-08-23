@@ -5,7 +5,7 @@ use Illuminate\Support\Facades\Route;
 
 use App\Http\Controllers\CursoController;
 
-Route::get('/', [CursoController::class, 'index']);
+Route::redirect('/', '/login');
 
 Route::middleware('auth')->group(function(){
     // Route, verbo, nome da rota temporário, classe do controller utilizada, nome da rota permanente.
@@ -19,3 +19,5 @@ Route::middleware('auth')->group(function(){
 });
 
 Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class,'index'])->name('home');
