@@ -74,7 +74,7 @@ class CursoController extends Controller
         $registro_recuperado =  Curso::find($id);
 
         if($registro_recuperado){
-            $registro_recuperado->update($dados_formulario);
+            $registro_recuperado->save($dados_formulario);
         }else{
             return redirect()->back();
         }
