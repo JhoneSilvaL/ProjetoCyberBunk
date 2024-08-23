@@ -14,11 +14,3 @@ Route::post('/curso-salvar', [CursoController::class, 'store'])->name('curso.sal
 Route::get('/curso-alterar/{id}', [CursoController::class, 'edit'])->name('curso.alterar');
 Route::put('/curso-atualizar/{id}', [CursoController::class, 'update'])->name('curso.atualizar');
 Route::get('/curso-deletar/{id}', [CursoController::class, 'destroy'])->name('curso.deletar');
-
-// // // Auth::routes();
-
-// // Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
-
-// // Route::get('/welcome', function(){
-// //     return view("welcome");
-// });
