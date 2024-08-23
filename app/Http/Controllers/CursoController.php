@@ -70,11 +70,13 @@ class CursoController extends Controller
      */
     public function update(Request $request, string $id)
     {
+
         $dados_formulario = $request->all();
         $registro_recuperado =  Curso::find($id);
 
         if($registro_recuperado){
-            $registro_recuperado->save($dados_formulario);
+            $registro_recuperado->update($dados_formulario);
+            return redirect()->route('curso.listagem');
         }else{
             return redirect()->back();
         }
