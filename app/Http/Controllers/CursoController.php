@@ -32,7 +32,9 @@ class CursoController extends Controller
      */
     public function store(Request $request)
     {
-        $dados_formulario = $request->all();
+        $dados_formulario = $request->validate([
+            'nome' => 'required|unique:cursos|min:2|max:60'
+        ]);
 
         $retorno = Curso::create($dados_formulario);
 
