@@ -15,6 +15,7 @@ return new class extends Migration
         (Blueprint $table) {
             $table->id();
             $table->string('nome', 60)->unique();
+            $table->softDeletes();
             $table->timestamps();
         });
     }
