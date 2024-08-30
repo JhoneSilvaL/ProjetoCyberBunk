@@ -3,21 +3,25 @@
 @section('title', 'Cadastro de Curso')
 
 @section('content_header')
-<h1>Novo Cadastro</h1>
+    <nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="#">Cursos</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Novo</li>
+        </ol>
+    </nav>
 @stop
 
 @section('content')
-<form action="{{route('curso.salvar')}}" method="POST">
+    <form action="{{route('curso.salvar')}}" method="post">
     @include('curso-modelo')
-</form>
+    </form>
 @stop
 
 @section('css')
-{{-- Add here extra stylesheets --}}
-{{--
-<link rel="stylesheet" href="/css/admin_custom.css"> --}}
+    {{-- Add here extra stylesheets --}}
+    {{-- <link rel="stylesheet" href="/css/admin_custom.css"> --}}
 @stop
 
 @section('js')
-<script> console.log("Hi, I'm using the Laravel-AdminLTE package!"); </script>
+    <script> console.log("Hi, I'm using the Laravel-AdminLTE package!"); </script>
 @stop
