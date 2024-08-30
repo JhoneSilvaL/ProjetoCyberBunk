@@ -9,10 +9,7 @@
 @section('content')
     <form action="{{route('curso.atualizar', ['id' => $objeto->id])}}" method="POST">
         @method('PUT')
-        @csrf
-        <label for="nome">Nome</label>
-        <input type="text" name="nome" id="nome" value="{{ $objeto->nome }}" required autofocus>
-        <button>Salvar</button>
+        @include('curso-modelo')
     </form>
 @stop
 
